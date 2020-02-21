@@ -1,0 +1,33 @@
+{
+  "name": "terveystalo_tehtava",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "watch": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand --detectOpenHandles",
+    "lint": "eslint ."
+  },
+  "author": "Eetu Alastalo",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^5.4.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "setupFiles": [
+      "./data/db.js"
+    ]
+  }
+}
