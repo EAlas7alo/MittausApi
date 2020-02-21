@@ -18,11 +18,6 @@ const initialMeasurements = [
 ]
 
 const initializeDb = () => {
-  const clearDb = db.prepare(`
-    DROP TABLE IF EXISTS measurements
-    CREATE TABLE IF NOT EXISTS measurements
-  `)
-  clearDb.run()
   const insert = db.prepare(
     `INSERT INTO measurements 
       (id, name, quantity, referenceValueLower, referenceValueUpper)
@@ -33,7 +28,6 @@ const initializeDb = () => {
   insertMany(initialMeasurements)
   console.log('init complete')
 }
-
 
 const measurementsInDb = () => {
   const stmt = db.prepare('SELECT * FROM measurements')
