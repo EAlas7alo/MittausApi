@@ -2,8 +2,8 @@
 
 # Käyttöohjeet
 
-Käynnistys deviympäristössä
+Käynnistys deviympäristössä  
 `npm run watch`
 
-Testit
+Testit  
 `npm test`
