@@ -1,8 +1,8 @@
 # MittausApi
 
-# Käyttöohjeet
+## Käyttöohjeet
 
-Käynnistys deviympäristössä  
+Käynnistys deviympäristössä. Käynnistyy oletuksena porttiin 3001.  
 `npm run watch`
 
 Testit  
