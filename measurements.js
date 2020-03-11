@@ -4,6 +4,7 @@ const db = require('./data/db')
 
 msrmntsRouter.get('/', (req, res) => {
   const stmt = db.prepare('SELECT * from measurements')
+  console.log(stmt.all())
   res.json(stmt.all())
 })
 
@@ -48,7 +49,6 @@ msrmntsRouter.put('/:id', (req, res) => {
     } catch(error) {
       res.sendStatus(400)
     }
-
   } else {
     res.sendStatus(404)
   }
